@@ -13,6 +13,6 @@ Perl, The OpenNLP,Weka
 
 2) Comb out special characters with perl code.
 
-3) Use word with weka function(Random Forest,Support Vector Machines,N-gram).  
+3) Use functions(Random Forest,Support Vector Machines,N-gram) and classify words.  
 
 4)Test the outcome.    
