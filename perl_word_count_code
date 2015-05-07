@@ -1,0 +1,34 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use utf8;
+
+# the argument list should contain the file name
+die "usage: word.pl filename\n" if scalar @ARGV < 1;
+# get the filename from the argument list
+my ($filename) = @ARGV;
+
+# Open the file given as the first argument on the command line
+open(INFILE, $filename) or die "Can't open $filename\n";
+
+#open(Output, '>', 'word.txt') or die "Could not open 'word.txt' $!";
+
+my %count;
+
+while (my $line = <INFILE>) {
+    chomp $line;
+    $line =~tr/A-Z/a-z/;
+    $line =~ s/\n//g;
+    #$line =~ s/^[^\w\d]+(.*?",)[^\w\d]+$/$1/;
+
+    my @words = split / /, $line;
+    
+    print @words;
+    foreach my $word (@words) {
+        $count{$word}++;
+    }
+}
+
+foreach my $word (keys %count) {
+   print  "$word : $count{$word}\n";
+}
