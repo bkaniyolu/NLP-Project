@@ -8,5 +8,7 @@
 Perl, The OpenNLP,Weka
 
 ###Steps
-1)
-   
+1) Get 40 texts of 2 male authors and 2 female authors.
+2) Comb out special characters with perl code.
+3) Use word with weka function(random forest,Support vector machines,n-gram).  
+4)Test the outcome.    
